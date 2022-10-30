@@ -49,7 +49,7 @@ public class Hospital {
 			ficharEntrada(empleado);
 		}
 		
-	}
+	} 
 	
 	private void entradaPacientes() {
 		salaEspera[0]= new Paciente("Paciente1","Apellido","5555D","Fiebre Alta");
@@ -60,19 +60,26 @@ public class Hospital {
 	
 	private void atenderPacientes() {
 		boolean hayPacientes = true;
-		while (hayPacientes) {
+		do {
 			//Cada enfermero recoge un paciente de la sala de espera
 			for (Enfermero enfermero : enfermeros) {
 				//Recorreo los pacientes de la sala de espera
 				for (int i = 0; i < salaEspera.length; i++) {
 					Paciente paciente = salaEspera[i];
 					if (paciente!=null) {
-						enfermero.atenderPaciente(paciente,UtilsHospital.consultaVacia(consultas));						
+						//El enfermero atiende al paciente
+						enfermero.atenderPaciente(paciente,UtilsHospital.consultaVacia(consultas));
+						//Si es el último paciente atendido indico que ya no hay más pacientes
+						if((i+1)==salaEspera.length) {
+							hayPacientes = false;
+						}
 					}
+					
 				}
 				
 			}
-		}
+		}while (hayPacientes);
+		
 	}
 	
 	

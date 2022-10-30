@@ -1,8 +1,6 @@
 package curso.java.ejercicios.poo.hospital;
 
-import curso.java.funciones.UtilsHospital;
-
-public class Enfermero extends Persona implements IEmpleadoHospital {
+public class Enfermero extends EmpleadoHospital {
 	private String seccion;
 	
 	public Enfermero(String nombre, String apellidos, String dni, String seccion) {

@@ -1,15 +1,13 @@
 package curso.java.ejercicios.poo.hospital;
 
-public class Doctor extends Persona implements IEmpleadoHospital {
+public class Doctor extends EmpleadoHospital {
 	private String especialidad;
-	
-	
+		
 	public Doctor(String nombre, String apellidos, String dni, String especialidad) {
 		super(nombre, apellidos, dni);
 		this.especialidad = especialidad;
 	}
 
-	
 	public String getEspecialidad() {
 		return especialidad;
 	}
@@ -31,5 +29,6 @@ public class Doctor extends Persona implements IEmpleadoHospital {
 		System.out.println("El doctor "+getNombre() + " esta fichando la hora de salida");
 
 	}
-
+ 
+	
 }

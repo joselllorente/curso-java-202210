@@ -3,8 +3,6 @@ package curso.java.colecciones;
 import java.util.HashSet;
 import java.util.Set;
 
-import curso.java.ejercicios.poo.maniquis.pojos.Boton;
-
 public class Conjuntos {
 
 	public static void main(String[] args) {
