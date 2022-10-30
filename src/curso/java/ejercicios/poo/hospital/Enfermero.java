@@ -20,7 +20,7 @@ public class Enfermero extends EmpleadoHospital {
 
 
 	public void atenderPaciente(Paciente paciente, Consulta consulta) {
-		System.out.println("Enferemero "+ this.getNombre() +"atendiendo al paciente "+ paciente.getNombre());
+		System.out.println("Enfermero "+ this.getNombre() +" atendiendo al paciente "+ paciente.getNombre() + " asignado a la consulta " +consulta.getNumConsulta());
 		consulta.setPaciente(paciente);
 		
 	}
