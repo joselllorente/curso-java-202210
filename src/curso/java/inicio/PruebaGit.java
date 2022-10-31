@@ -9,5 +9,8 @@ public class PruebaGit {
 		System.out.println("Hola mundo4");
 		System.out.println("Hola mundo5");
 	}
-
+	
+	public void test(){
+		System.out.println("Test");
+	}
 }
