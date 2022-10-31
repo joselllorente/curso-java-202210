@@ -38,7 +38,7 @@ public class Doctor extends EmpleadoHospital {
 		System.out.println("El doctor "+this.getNombre() + " está tratando al paciente "+paciente.getNombre() +" que tiene " + paciente.getSintoma() );
 		//Si el resultado generado aleatoriamente es mayor de 8 el paciente necesita ser hospitalizado
 		if(Utils.tirarDado(10)>1) {
-			enfermedad = UtilsHospital.ENFERMEDADES[Utils.tirarDado(2)];
+			enfermedad = UtilsHospital.ENFERMEDADES[Utils.tirarDado(3)-1];
 		}
 		
 		return enfermedad;

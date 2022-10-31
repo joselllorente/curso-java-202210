@@ -25,7 +25,11 @@ public class Hospital {
 		
 	}
 	
-	private void iniciaHospital() {
+	/**
+	 * Se crean los objetos de los empleados del hospital
+	 * @return
+	 */
+	private EmpleadoHospital[] crearEmpleados () {
 		Doctor doctor1 = new Doctor("Doctor1", "Apellidos1", "1111A", "General");
 		Doctor doctor2 = new Doctor("Doctor2", "Apellidos2", "2222B", "General");
 		
@@ -43,9 +47,17 @@ public class Hospital {
 		enfermeros[1]= enfermero2;
 		
 		//Ponemos a fichar a todos los empleados
-		IEmpleadoHospital[] empleados = {doctor1,doctor2,enfermero1,enfermero2};
-		ficharEntrada(empleados);
+		EmpleadoHospital[] empleados = {doctor1,doctor2,enfermero1,enfermero2};
 		
+		return empleados;
+	}
+	
+	private void iniciaHospital() {
+		//Creamos los empleados del Hospital
+		EmpleadoHospital[] empleados = crearEmpleados();
+		
+		//Fichamos la entrada de todos los empleados
+		ficharEntrada(empleados);
 		
 		//Entran los pacientes
 		entradaPacientes();
@@ -69,8 +81,8 @@ public class Hospital {
 	 */
 	private void entradaPacientes() {
 		salaEspera[0]= new Paciente("Paciente1","Apellido","5555D","Fiebre Alta");
-		salaEspera[1]= new Paciente("Paciente2","Apellido","6666E","Fiebre Alta");
-		salaEspera[2]= new Paciente("Paciente3","Apellido","7777F","Fiebre Alta");
+		salaEspera[1]= new Paciente("Paciente2","Apellido","6666E","Mucha Tos");
+		salaEspera[2]= new Paciente("Paciente3","Apellido","7777F","Mareos");
 		salaEspera[3]= new Paciente("Paciente4","Apellido","8888G","Fiebre Alta");
 	}
 	
@@ -113,8 +125,9 @@ public class Hospital {
 		for (Consulta consulta : consultas) {
 			Paciente paciente = consulta.getPaciente(); 
 			if (paciente!=null) {
-				
-				String enfermedad = consulta.getDoctor().tratarPaciente(paciente);
+				Doctor doctor = consulta.getDoctor();
+				String enfermedad = doctor.tratarPaciente(paciente);
+				//Si esta enfermo
 				if (!enfermedad.equals("")) {
 					System.out.println("El paciente tiene " + enfermedad );
 					boolean hayHabitacion = hospitalizarPaciente(paciente, enfermedad);
