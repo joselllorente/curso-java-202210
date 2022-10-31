@@ -22,7 +22,6 @@ public class Hospital {
 	public static void main(String[] args) {
 		Hospital hospital = new Hospital("Hospital Central");
 		hospital.iniciaHospital();
-		hospital.entradaPacientes();
 		
 	}
 	
