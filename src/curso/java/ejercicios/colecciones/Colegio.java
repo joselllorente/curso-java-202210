@@ -1,9 +1,9 @@
 package curso.java.ejercicios.colecciones;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Colegio {
 	
@@ -11,7 +11,7 @@ public class Colegio {
 
 	public Colegio() {
 		super();
-		this.estudiantes = new ArrayList<Estudiante>();
+		this.estudiantes = new CopyOnWriteArrayList<Estudiante>();
 	}
 	
 	public static void main(String[] args) {
@@ -23,10 +23,10 @@ public class Colegio {
 	private void inciaColegio() {
 		crearEstudiantes();
 		mostrarDatosEstudiantes();
-//		mostrarDatosEstudiantesMatematicas();
-//		mostrarDatosEstudiantesAprobados();
+		mostrarDatosEstudiantesMatematicas();
+		mostrarDatosEstudiantesAprobados();
 		eliminaSuspensosLengua();
-		mostrarDatosEstudiantes();
+//		mostrarDatosEstudiantes();
 	}
 	
 	private void mostrarDatosEstudiantes() {
@@ -113,6 +113,20 @@ public class Colegio {
 		
 		Estudiante estudiante2 = new Estudiante("Ramon", "Apellidos", "2222222B", asignaturasAlumno2);
 		estudiantes.add(estudiante2);
+		
+		//Alumno3
+		Asignatura asignatura1Alumno3 = new Asignatura ("Lengua", 2);
+		Asignatura asignatura2Alumno3 = new Asignatura ("Matematicas", 8);
+		Asignatura asignatura3Alumno3 = new Asignatura ("Fisica", 6);
+		
+		Set <Asignatura> asignaturasAlumno3 = new HashSet <Asignatura>();
+		asignaturasAlumno3.add(asignatura1Alumno3);
+		asignaturasAlumno3.add(asignatura2Alumno3);
+		asignaturasAlumno3.add(asignatura3Alumno3);
+		
+		Estudiante estudiante3 = new Estudiante("Maria", "Apellidos", "33333C", asignaturasAlumno3);
+		estudiantes.add(estudiante3);
+		
 	}
 
 }
