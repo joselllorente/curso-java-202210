@@ -23,10 +23,23 @@ public class Colegio {
 	private void inciaColegio() {
 		crearEstudiantes();
 		mostrarDatosEstudiantes();
+		
+		//Para añadir objetos de manera individual en vez de en el set
+		Asignatura asignatura4Alumno3 = new Asignatura ("Historia", 6);
+		Estudiante estudiante3 = estudiantes.get(2);
+		estudiante3.addAsignatura(asignatura4Alumno3);
+//		Set<Asignatura> asignaturasEstudiante3 = estudiante3.getAsignaturas();
+//		asignaturasEstudiante3.add(asignatura4Alumno3);
+		
+		mostrarDatosEstudiantes();
+		
 		mostrarDatosEstudiantesMatematicas();
 		mostrarDatosEstudiantesAprobados();
 		eliminaSuspensosLengua();
-//		mostrarDatosEstudiantes();
+		mostrarDatosEstudiantes();
+		
+		
+		
 	}
 	
 	private void mostrarDatosEstudiantes() {
@@ -126,6 +139,11 @@ public class Colegio {
 		
 		Estudiante estudiante3 = new Estudiante("Maria", "Apellidos", "33333C", asignaturasAlumno3);
 		estudiantes.add(estudiante3);
+		
+		
+		
+		
+		
 		
 	}
 
