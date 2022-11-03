@@ -1,0 +1,11 @@
+Nombre1|Apellidos1|1111A|Matemáticas;Lengua
+Nombre2|Apellidos2|2222B|Matemáticas;Física
+Nombre3|Apellidos3|3333C|Historia;Lengua
+Nombre4|Apellidos4|4444D|Matemáticas;Física;Química
+Nombre5|Apellidos5|5555E|Matemáticas;Lengua
+Nombre6|Apellidos6|6666F|Inglés
+Nombre7|Apellidos7|7777G|Gimnasia
+Nombre8|Apellidos8|8888H|Matemáticas;Lengua
+Nombre9|Apellidos9|9999I|Geografía
+Nombre10|Apellidos10|1010J|Geografís;Historia
+Nombre11|Apellidos11|1111K|Matemáticas;Química
